@@ -69,7 +69,7 @@ async function start() {
     let t2 = content.match(/【签到奖励】:((.|\n)*)【其他奖励】/)
     let res2 = t2 ? t2[1].replace(/\n/,'') : '总计0'
 
-    content = "" + ` ${res2} ` + ` ${res} ` + new Date().toLocaleDateString() + content;
+    content = "" + ` ${res2} ` + ` ${res} ` + new Date().toLocaleDateString() + "\n" + content;
     
     await sendNotify("轨迹的账号完成签到", content);
   }

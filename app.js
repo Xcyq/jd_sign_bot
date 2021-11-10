@@ -69,7 +69,7 @@ async function start() {
     let res2 = t2 ? t2[1].replace(/\n/,'') : '总计0'
 
     
-    await sendNotify("" + ` ${res2} ` + ` ${res} ` + new Date().toLocaleDateString(), content);
+    await sendNotify("轨迹的签到结果：" + ` ${res2} ` + ` ${res} ` + new Date().toLocaleDateString(), content);
   }
 }
 

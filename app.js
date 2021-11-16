@@ -49,7 +49,10 @@ async function sendNotify () {
     secret: PUSH_SECRET,
     address: PUSH_ADDRESS
   });
-  await sendNotify("" + ` ${res2} ` + ` ${res} ` + new Date().toLocaleDateString(), content);
+  
+  content = "" + ` ${res2} ` + ` ${res} ` + new Date().toLocaleDateString() + "\n" + content;
+    
+  await sendNotify("轨迹的账号完成签到", content);
 }
 
 // 主程序
